@@ -3,8 +3,8 @@
 - type: github
   icon: "iconfont icon-github"
 
-- type: twitter
-  icon: "iconfont icon-twitter"
+# - type: twitter
+#   icon: "iconfont icon-twitter"
 
 - type: email
   icon: "iconfont icon-mail"

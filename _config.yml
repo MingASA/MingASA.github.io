@@ -13,33 +13,33 @@ timezone: Asia/Shanghai
 
 # jekyll-seo-tag 设置 › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # --------------------------
-title: Nihil       # 主标题
+title: MingASA       # 主标题
 
-tagline: Nichts Hsu # 副标题
+tagline: My Blog to record the world  # 副标题
 
 description: >- # 由 seo meta 和 atom feed 使用
-  Nichts Hsu 的个人博客
+  MingASA 的个人博客
 
 # 填入你的网站的协议和域名.
 # 例如，'https://username.github.io'，注意不要以 '/' 结尾。
-url: "https://nihil.cc"
+url: "https://MingASA.github.io"
 
 github:
-  username: NichtsHsu # Github 用户名
+  username: MingASA # Github 用户名
 
 twitter:
-  username: NichtsHsu # 推特用户名
+  username: MingASA # 推特用户名
 
 social:
   # 改为你的全名。
   # 这将会显示为帖子的默认作者以及页脚的版权所有者
-  name: Nichts Hsu
-  email: NichtsVonChaos@gmail.com # 邮箱地址
+  name: MingASA
+  email: mingasa7@gmail.com # 邮箱地址
   links:
     # 第一个链接将会作为版权所有者的链接
-    - https://nihil.cc/
-    - https://twitter.com/NichtsHsu # 推特主页
-    - https://github.com/NichtsHsu # Github 主页
+    - https://github.com/MingASA
+    # - https://twitter.com/NichtsHsu # 推特主页
+    # - https://github.com/NichtsHsu # Github 主页
     # 取消注释以添加更多链接
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
@@ -103,7 +103,7 @@ mouse_click_effect: false
 cdn: ""
 
 # 侧边栏的头像，支持本地或 CROS 资源
-avatar: /avatar.png
+avatar: ./assets/img/avatar.jpg
 
 # SEO `og:image` 元标记中使用的全站社交预览图像的 URL。
 # 可以在帖子的 Front Matter 中使用 `page.image` 覆盖。
