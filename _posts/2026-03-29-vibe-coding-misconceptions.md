@@ -29,8 +29,8 @@ pin: true
 # 演示：AI 的"理解"是模式匹配
 
 # 你说："我需要一个用户排序功能"
-# AI 看到的是这个模式：
-PATTERN = "用户" + "排序" → 匹配到 → "SELECT * FROM users ORDER BY ..."
+# AI 看到的是这个模式（伪代码，示意）：
+# PATTERN = "用户" + "排序"  -->  匹配到  -->  "SELECT * FROM users ORDER BY ..."
 
 # 但你的实际需求可能是：
 # - 按用户最近活跃度排序（需要 session 数据）
