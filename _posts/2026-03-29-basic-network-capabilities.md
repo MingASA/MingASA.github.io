@@ -20,13 +20,13 @@ tags: [proxy, tun, clash, network, vpn, fingerprint-browser]
 代理（Proxy）是你的设备和目标服务器之间的"中间人"。你的请求先发给代理服务器，代理服务器再转发给目标。
 
 ```
-没有代理：
-你的电脑 ─────────────────→ 目标服务器
-         (直接连接)
-
-有代理：
+有代理（以 Shadowsocks 为例，数据经过加密）：
 你的电脑 ────→ 代理服务器 ────→ 目标服务器
-         (加密)      (转发)
+         (加密传输)    (转发)
+
+有代理（HTTP/SOCKS5，无额外加密）：
+你的电脑 ────→ 代理服务器 ────→ 目标服务器
+         (明文/HTTPS)  (转发)
 ```
 
 ### 1.2 代理协议对比
@@ -37,7 +37,7 @@ tags: [proxy, tun, clash, network, vpn, fingerprint-browser]
 | SOCKS5 | 会话层 | ✅ (原生) | 高 | 通用代理 |
 | Shadowsocks | 应用层 | ✅ (加密) | 高 | 科学上网 |
 | VMess/VLESS | 应用层 | ✅ (加密) | 高 | 科学上网 (Xray) |
-| Hysteria2 | 应用层 | ✅ (QUIC) | 极高 | 高延迟网络 |
+| Hysteria2 | 应用层 | ✅ (QUIC) | 弱网优化 | 高丢包/高延迟网络 |
 
 ```bash
 # 测试代理是否工作

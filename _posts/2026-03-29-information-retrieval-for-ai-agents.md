@@ -31,14 +31,14 @@ Level 4: 自动化获取 — Agent + MCP + Skills
 | L1 | Twitter/知乎/RSS | 了解趋势、发现话题 | ⭐⭐ |
 | L2 | Google/百度/DuckDuckGo | 解决具体问题 | ⭐⭐⭐ |
 | L3 | 爬虫/API/学术论文 | 系统性研究 | ⭐⭐⭐⭐ |
-| L4 | Agent/MCP/Skill | 自动化信息管道 | ⭐⭐⭐⭐⭐ |
+| L4 | Agent/MCP/Skill | 自动化信息管道 | ⭐⭐⭐⭐（取决于数据源和校验） |
 
 ### 1.2 搜索引擎的底层逻辑
 
 理解搜索引擎的工作原理，才能写出更好的搜索指令。
 
 ```python
-# 搜索引擎的工作原理（简化版）
+# 搜索引擎的工作原理（极度简化版，非真实算法）
 class SearchEngine:
     def __init__(self):
         self.index = {}  # 倒排索引：词 → 文档列表
@@ -55,7 +55,7 @@ class SearchEngine:
         return ranked[:10]
     
     def rank(self, candidates, query):
-        """排序算法的核心：多个信号的加权"""
+        """排序算法的示意（实际权重是商业机密）"""
         for doc in candidates:
             doc.score = (
                 self.relevance(doc, query) * 0.4 +  # 关键词匹配度

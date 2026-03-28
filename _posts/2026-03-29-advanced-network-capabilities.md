@@ -31,6 +31,7 @@ usermod -aG sudo myuser     # 给 sudo 权限
 passwd myuser               # 设置密码
 
 # ===== SSH 安全加固 =====
+# ⚠️ 先确保 SSH 密钥登录可用，再禁用密码！否则会锁死自己
 # /etc/ssh/sshd_config
 PermitRootLogin no          # 禁止 root 登录
 PasswordAuthentication no   # 禁止密码登录（只用密钥）
