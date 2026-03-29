@@ -104,7 +104,13 @@ def binary_search_correct(arr, target):
         else:
             right = mid - 1
     return -1
+
+# 验证：对同一个数组搜索，对比结果
+arr = [1, 3, 5, 7, 9, 11]
+print("正确版本:", binary_search_correct(arr, 7))   # 应该返回 3
+print("搜不存在的:", binary_search_correct(arr, 6))  # 应该返回 -1
 ```
+{: run="python" }
 
 **推论：** 测试不是可选项。核心逻辑必须有单元测试覆盖边界条件。
 
