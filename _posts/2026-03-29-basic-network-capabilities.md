@@ -130,8 +130,15 @@ def choose_proxy_mode(scenario):
     elif scenario == "所有流量都要代理":
         return "TUN 模式"  # 最彻底
     elif scenario == "路由器级别代理":
-        return "透明代理 (iptables/nftables)"  # 最高级
+        return "透明代理 (iptables/nftables)"
+    else:
+        return "不确定，请补充场景"
+
+# 试试不同的场景
+for s in ["只用浏览器上网", "终端也要走代理", "所有流量都要代理"]:
+    print(f"{s} → {choose_proxy_mode(s)}")
 ```
+{: run="python" }
 
 ---
 

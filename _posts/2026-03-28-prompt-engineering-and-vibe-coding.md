@@ -243,6 +243,10 @@ def fibonacci(n):
         a, b = b, a + b
     return b
 
+print([fibonacci(i) for i in range(10)])  # 改 n 试试
+```
+{: run="python" }
+
 # Vibe Coding 思维
 """
 帮我实现一个高效的斐波那契数列计算器，
