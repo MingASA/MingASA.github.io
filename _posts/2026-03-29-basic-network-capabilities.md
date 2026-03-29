@@ -369,8 +369,15 @@ const fingerprint = {
   fonts: getInstalledFonts(),            // 已安装字体
   audio: getAudioContextFingerprint(),   // 音频上下文特征
 };
-// 这些组合起来几乎可以唯一标识一台设备
+
+// 试试看你自己的浏览器指纹（去掉上面那些未定义的函数调用）
+console.log("UA:", navigator.userAgent);
+console.log("屏幕:", screen.width + "x" + screen.height);
+console.log("时区:", Intl.DateTimeFormat().resolvedOptions().timeZone);
+console.log("语言:", navigator.language);
+console.log("平台:", navigator.platform);
 ```
+{: run="javascript" }
 
 ### 5.2 指纹浏览器的作用
 
