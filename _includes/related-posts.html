@@ -77,16 +77,21 @@
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       {% for post in relate_posts %}
         <article class="col">
-          <div class="post-preview card h-100">
-            <a href="{{ post.url | relative_url }}" class="related-post-link">
-              <div class="card-body">
+          <div class="post-preview card h-100 position-relative">
+            <div class="card-body">
+              <a
+                href="{{ post.url | relative_url }}"
+                class="related-post-link stretched-link"
+                aria-label="{{ post.title }}"
+              ></a>
+              <div class="related-post-content">
                 {% include datetime.html date=post.date lang=include.lang %}
                 <h4 class="pt-0 my-2">{{ post.title }}</h4>
                 <div class="text-muted">
                   <p>{% include post-description.html %}</p>
                 </div>
               </div>
-            </a>
+            </div>
 
             <div class="card-footer related-post-actions">
               {% include likes.html post=post context='related' %}
