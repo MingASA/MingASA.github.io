@@ -1,0 +1,36 @@
+{% assign _post = include.post | default: page %}
+{% assign _context = include.context | default: 'post' %}
+{% assign _base_likes = _post.likes | default: 0 | plus: 0 %}
+
+{% if _base_likes < 0 %}
+  {% assign _base_likes = 0 %}
+{% endif %}
+
+{% capture _likes_key %}{{ site.baseurl | default: '' }}{{ _post.url }}{% endcapture %}
+
+<div
+  class="likes likes--{{ _context }}"
+  data-likes-key="{{ _likes_key | xml_escape }}"
+  data-base-likes="{{ _base_likes }}"
+  data-likes-context="{{ _context }}"
+>
+  <button
+    class="likes-trigger"
+    type="button"
+    data-likes-toggle
+    aria-pressed="false"
+    aria-label="Toggle like for this post"
+    title="Toggle like for this post"
+  >
+    <span class="likes-icon" aria-hidden="true">
+      <svg viewBox="0 0 16 16" focusable="false">
+        <path
+          d="M8 13.2 2.9 8.3a3.5 3.5 0 0 1 4.9-5 3.5 3.5 0 0 1 5 5L8 13.2Z"
+          vector-effect="non-scaling-stroke"
+        />
+      </svg>
+    </span>
+    <span class="likes-count" data-likes-count>{{ _base_likes }}</span>
+    <span class="visually-hidden">Toggle like for this post</span>
+  </button>
+</div>

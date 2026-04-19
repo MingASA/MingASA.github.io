@@ -112,6 +112,10 @@ refactor: true
           <!-- .card-body -->
         </div>
       </a>
+
+      <div class="post-actions">
+        {% include likes.html post=post context='home' %}
+      </div>
     </article>
   {% endfor %}
 </div>

@@ -39,6 +39,14 @@ header {
     }
   }
 
+  .post-meta-end {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.35rem 0.85rem;
+  }
+
   h1 + .post-meta {
     margin-top: 1.5rem;
   }
@@ -554,8 +562,29 @@ header {
   }
 
   .card {
+    background: none;
+
     h4 {
       @extend %text-clip;
+    }
+  }
+
+  .related-post-link {
+    color: inherit;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .related-post-actions {
+    padding: 0 1rem 1rem;
+    border-top: 0;
+    background: none;
+
+    .likes {
+      display: flex;
+      justify-content: flex-end;
     }
   }
 }

@@ -3,6 +3,7 @@ import { basic, initTopbar, initSidebar } from './modules/layouts';
 import {
   loadImg,
   imgPopup,
+  initLikes,
   initLocaleDatetime,
   initClipboard,
   initToc,
@@ -18,6 +19,7 @@ loadImg();
 initToc();
 imgPopup();
 initSidebar();
+initLikes();
 initLocaleDatetime();
 initClipboard();
 initTopbar();

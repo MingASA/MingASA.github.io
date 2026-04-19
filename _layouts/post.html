@@ -80,7 +80,7 @@ script_includes:
           </em>
         </span>
 
-        <div>
+        <div class="post-meta-end">
           <!-- pageviews -->
           {% if site.pageviews.provider and site.analytics[site.pageviews.provider].id %}
             <span>
@@ -93,6 +93,9 @@ script_includes:
 
           <!-- read time -->
           {% include read-time.html content=content prompt=true lang=lang %}
+
+          <!-- likes -->
+          {% include likes.html post=page context='post' %}
         </div>
       </div>
     </div>

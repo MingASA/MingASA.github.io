@@ -82,6 +82,12 @@
       }
     }
   }
+
+  .post-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 1rem 1rem;
+  }
 } /* #post-list */
 
 .pagination {
@@ -152,6 +158,10 @@
           }
         }
       }
+    }
+
+    .post-actions {
+      padding: 0 1.75rem 1.25rem;
     }
   }
 }
