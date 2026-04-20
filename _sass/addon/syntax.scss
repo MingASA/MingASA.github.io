@@ -265,14 +265,103 @@ div {
       }
     }
 
-    &:focus {
-      outline: none;
-    }
-
     &.button-run-code {
       position: absolute;
       right: 2.25rem;
     }
+
+    &[disabled] {
+      opacity: 0.55;
+
+      &:hover {
+        background-color: inherit;
+      }
+    }
+  }
+}
+
+.highlight.run-visual-host {
+  position: relative;
+}
+
+.run-visual-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+.run-visual-overlay > * {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.heart-runner {
+  div[class^='language-'] {
+    margin-top: 0.75rem;
+  }
+
+  .code-header {
+    justify-content: flex-end;
+    margin-left: 0;
+    margin-right: 0;
+
+    &::before,
+    span {
+      display: none !important;
+    }
+
+    .button-copy {
+      display: none !important;
+    }
+
+    .button-run-code {
+      position: static;
+      width: auto;
+      min-width: 0;
+      height: $code-header-height;
+      padding: 0 0.85rem;
+      border: 1px solid var(--btn-border-color);
+      border-radius: 999px;
+      background-color: var(--card-bg);
+      color: var(--text-muted-color);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+
+      &::after {
+        content: 'Click Me';
+        font-size: 0.82rem;
+        font-weight: 600;
+      }
+
+      &:hover {
+        border-color: var(--link-color);
+        color: var(--link-color);
+      }
+    }
+  }
+
+  .highlight {
+    height: 0;
+    min-height: 0;
+    overflow: hidden;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .highlight pre {
+    display: none;
+  }
+
+  .highlight.run-visual-host {
+    border-radius: $radius-lg;
   }
 }
 
