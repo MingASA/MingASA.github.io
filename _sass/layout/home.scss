@@ -84,9 +84,12 @@
   }
 
   .post-actions {
+    margin-top: -1rem;
+    position: relative;
+    z-index: 1;
     display: flex;
     justify-content: flex-end;
-    padding: 0 1rem 1rem;
+    padding: 0 1rem 0.65rem;
   }
 } /* #post-list */
 
@@ -161,7 +164,8 @@
     }
 
     .post-actions {
-      padding: 0 1.75rem 1.25rem;
+      margin-top: -1.15rem;
+      padding: 0 1.75rem 0.8rem;
     }
   }
 }
